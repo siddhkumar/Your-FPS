@@ -44,6 +44,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Cross Hair" type="Label" parent="Head/Camera/CenterContainer"]
+margin_left = 508.0
+margin_top = 293.0
+margin_right = 516.0
+margin_bottom = 307.0
+text = "X"
+
 [node name="Aimcast" type="RayCast" parent="Head/Camera"]
 enabled = true
 cast_to = Vector3( 0, 0, -1000 )
