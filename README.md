@@ -11,3 +11,9 @@ I have tried to use as less external resources as possible. However, I am not a 
 Here is a list of external resources used - 
 1. Sky HDRI - https://ambientcg.com/view?id=SkyOnlyHDRI015
 2. Godot Github Integration Plugin - https://github.com/fenix-hub/godot-engine.github-integration
+
+### Input map
+move_forward - W or Up key
+move_backward - S or Down key
+move_left - A or Left key
+move_right - D or Right key
