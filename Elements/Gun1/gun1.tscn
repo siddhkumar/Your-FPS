@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Elements/Gun1/Material.material" type="Material" id=1]
+[ext_resource path="res://Elements/Gun1/gun1.gd" type="Script" id=2]
 
 [sub_resource type="ArrayMesh" id=3]
 resource_name = "gun1-raw_Cube002"
@@ -155,6 +156,7 @@ tracks/0/keys = {
 }
 
 [node name="gun1" type="Spatial"]
+script = ExtResource( 2 )
 
 [node name="Cube002" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.25845, 1.2715, -0.701023, 5.36473e-08 )
