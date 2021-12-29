@@ -8,7 +8,6 @@ var crouch_speed = 20
 var acceleration = 20
 var gravity = 28
 var jump = 10
-var damage = 50
 
 var jump_num = 0
 
@@ -25,7 +24,8 @@ onready var head = $Head
 onready var pcap = $CollisionShape
 onready var bonker = $Headbonker
 onready var anim_play = $Head/Camera/AnimationPlayer
-onready var aimcast = $Head/Camera/Aimcast
+onready var gun = $Head/Camera/gun1
+onready var footstep_audio_player = $FootstepAudioPlayer
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -37,7 +37,11 @@ func _input(event):
 			head.rotation.x = clamp(head.rotation.x, deg2rad(-90), deg2rad(90))
 
 func _process(delta):
-	
+	basic_controls(delta)
+	footstep_audio()
+
+#If is network master
+func basic_controls(delta):
 	var head_bonked = false
 	
 	speed = default_move_speed
@@ -104,3 +108,15 @@ func _process(delta):
 	
 	if direction != Vector3():
 		anim_play.play("Head Bob")
+
+func footstep_audio():
+	if Input.is_action_pressed("move_forward") or Input.is_action_pressed("move_backward") or Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
+		if !footstep_audio_player.is_playing():
+			footstep_audio_player.play()
+	
+	if !Input.is_action_pressed("move_forward") and !Input.is_action_pressed("move_backward") and !Input.is_action_pressed("move_left") and !Input.is_action_pressed("move_right"):
+		if footstep_audio_player.is_playing():
+			footstep_audio_player.stop()
+
+
+

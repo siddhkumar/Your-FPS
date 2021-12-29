@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Elements/Gun1/gun1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elements/FootstepAudioPlayer/FootstepAudioPlayer.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.5
@@ -73,3 +74,5 @@ cast_to = Vector3( 0, 1, 0 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 mesh = SubResource( 3 )
 material/0 = null
+
+[node name="FootstepAudioPlayer" parent="." instance=ExtResource( 3 )]
