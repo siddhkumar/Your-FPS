@@ -56,12 +56,13 @@ margin_right = 516.0
 margin_bottom = 307.0
 text = "X"
 
-[node name="Aimcast" type="RayCast" parent="Head/Camera"]
-enabled = true
-cast_to = Vector3( 0, 0, -1000 )
-
 [node name="gun1" parent="Head/Camera" instance=ExtResource( 2 )]
 transform = Transform( -0.0209639, -0.00109647, -0.0977717, -0.00522314, 0.0998635, 0, 0.0976383, 0.00510675, -0.0209926, 0.442, -0.18, -0.632 )
+
+[node name="Aimcast" type="RayCast" parent="Head/Camera/gun1"]
+transform = Transform( -2.0964, -0.522313, 9.76383, -0.109647, 9.98635, 0.510675, -9.77718, -8.00355e-08, -2.09926, 7.00333, 2.16875, 2.99478 )
+enabled = true
+cast_to = Vector3( 0, 0, -1000 )
 
 [node name="Headbonker" type="RayCast" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.586792, 0 )
