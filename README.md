@@ -13,7 +13,7 @@ Here is a list of external resources used -
 2. Godot Github Integration Plugin - https://github.com/fenix-hub/godot-engine.github-integration
 
 ### Input map
-move_forward - W or Up key
-move_backward - S or Down key
-move_left - A or Left key
-move_right - D or Right key
+1. move_forward - W or Up key
+2. move_backward - S or Down key
+3. move_left - A or Left key
+4. move_right - D or Right key
