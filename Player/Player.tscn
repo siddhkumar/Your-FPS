@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Elements/Gun1/gun1.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.5
@@ -21,6 +22,10 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector3( 0, 0.458012, 0 ), Vector3( 0, 0.541634, 0 ), Vector3( 0, 0.458012, 0 ) ]
 }
+
+[sub_resource type="CapsuleMesh" id=3]
+radius = 0.5
+mid_height = 1.5
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 1 )
@@ -55,7 +60,15 @@ text = "X"
 enabled = true
 cast_to = Vector3( 0, 0, -1000 )
 
+[node name="gun1-raw" parent="Head/Camera" instance=ExtResource( 2 )]
+transform = Transform( -0.0209639, -0.00109647, -0.0977717, -0.00522314, 0.0998635, 0, 0.0976383, 0.00510675, -0.0209926, 0.442, -0.18, -0.632 )
+
 [node name="Headbonker" type="RayCast" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.586792, 0 )
 enabled = true
 cast_to = Vector3( 0, 1, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+mesh = SubResource( 3 )
+material/0 = null
