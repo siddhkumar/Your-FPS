@@ -60,7 +60,7 @@ text = "X"
 enabled = true
 cast_to = Vector3( 0, 0, -1000 )
 
-[node name="gun1-raw" parent="Head/Camera" instance=ExtResource( 2 )]
+[node name="gun1" parent="Head/Camera" instance=ExtResource( 2 )]
 transform = Transform( -0.0209639, -0.00109647, -0.0977717, -0.00522314, 0.0998635, 0, 0.0976383, 0.00510675, -0.0209926, 0.442, -0.18, -0.632 )
 
 [node name="Headbonker" type="RayCast" parent="."]
