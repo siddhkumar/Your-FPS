@@ -11,7 +11,7 @@ I have tried to use as less external resources as possible. However, I am not a 
 Here is a list of external resources used - 
 1. Sky HDRI - https://ambientcg.com/view?id=SkyOnlyHDRI015
 2. Godot Github Integration Plugin - https://github.com/fenix-hub/godot-engine.github-integration
-3. Footstep Sound - https://freesound.org/people/InspectorJ/sounds/328168/
+3. Footstep Sound - https://freesound.org/people/xkeril/sounds/611278/
 
 ### Input map
 1. move_forward - W or Up key
