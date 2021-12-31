@@ -12,6 +12,7 @@ Here is a list of external resources used -
 1. Sky HDRI - https://ambientcg.com/view?id=SkyOnlyHDRI015
 2. Godot Github Integration Plugin - https://github.com/fenix-hub/godot-engine.github-integration
 3. Footstep Sound - https://freesound.org/people/xkeril/sounds/611278/
+4. Rain sound - https://freesound.org/people/florianreichelt/sounds/459983/
 
 ### Input map
 1. move_forward - W or Up key
