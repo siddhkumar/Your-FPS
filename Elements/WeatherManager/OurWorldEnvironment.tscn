@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Elements/Panoramas/day1.png" type="Texture" id=1]
+
+[sub_resource type="PanoramaSky" id=3]
+panorama = ExtResource( 1 )
+
+[sub_resource type="Environment" id=4]
+background_mode = 2
+background_sky = SubResource( 3 )
+background_sky_orientation = Basis( 1, 0, 0, 0, 0.92562, 0.378455, 0, -0.378455, 0.92562 )
+background_energy = 0.7
+tonemap_exposure = 0.67
+tonemap_white = 1.66
+auto_exposure_min_luma = 0.61
+ss_reflections_fade_in = 6.33364
+ss_reflections_fade_out = 0.267943
+adjustment_enabled = true
+adjustment_brightness = 1.2
+adjustment_contrast = 1.1
+
+[node name="OurWorldEnvironment" type="WorldEnvironment"]
+environment = SubResource( 4 )
