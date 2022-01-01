@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="ArrayMesh" id=2]
+resource_name = "location1-raw_Plane"
+surfaces/0 = {
+"aabb": AABB( -1, 0, -1, 2, 1e-05, 2.00001 ),
+"array_data": PoolByteArray( 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 127, 127, 63, 0, 0, 0, 60, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 127, 127, 63, 0, 60, 0, 60, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 0, 127, 127, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191, 0, 127, 127, 63, 0, 60, 0, 0 ),
+"array_index_data": PoolByteArray( 0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 6,
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 4
+}
+
+[node name="ground" type="MeshInstance"]
+transform = Transform( 11.0131, 0, 0, 0, 11.0131, 0, 0, 0, 11.0131, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
