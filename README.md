@@ -14,6 +14,7 @@ Here is a list of external resources used -
 3. Footstep Sound - https://freesound.org/people/xkeril/sounds/611278/
 4. Rain sound - https://freesound.org/people/florianreichelt/sounds/459983/
 5. Thunder sound clip 1 - https://freesound.org/people/Littlebrojay/sounds/195439/
+6. Gunshot sound - https://freesound.org/people/mitchelk/sounds/136766/
 
 ### Input map
 1. move_forward - W or Up key
