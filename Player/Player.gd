@@ -29,16 +29,28 @@ onready var footstep_audio_player = $FootstepAudioPlayer
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	
+
+func maintain_camera():
+	#if get_parent().get_name() == "Location1":
+	if is_network_master():
+		$Head/Camera/gun1.enabled = true
+		$Head/Camera.current = true
+
 func _input(event):
-		if event is InputEventMouseMotion:
+		if event is InputEventMouseMotion and is_network_master():
 			rotate_y(deg2rad(-event.relative.x * mouse_sensitivity))
 			head.rotate_x(deg2rad(-event.relative.y * mouse_sensitivity))
 			head.rotation.x = clamp(head.rotation.x, deg2rad(-90), deg2rad(90))
 
-func _process(delta):
-	basic_controls(delta)
-	footstep_audio()
+func _physics_process(delta):
+	maintain_camera()
+	
+	if is_network_master():
+		basic_controls(delta)
+		footstep_audio()
+	rpc("rem" , transform)
+	
+
 
 #If is network master
 func basic_controls(delta):
@@ -117,6 +129,12 @@ func footstep_audio():
 	if !Input.is_action_pressed("move_forward") and !Input.is_action_pressed("move_backward") and !Input.is_action_pressed("move_left") and !Input.is_action_pressed("move_right"):
 		if footstep_audio_player.is_playing():
 			footstep_audio_player.stop()
+
+#Called remotely
+
+remote func rem(og):
+	if not is_network_master():
+		transform = og
 
 
 

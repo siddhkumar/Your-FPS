@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Networking/Master.gd" type="Script" id=1]
+[ext_resource path="res://Elements/WeatherManager/WeatherManager.tscn" type="PackedScene" id=2]
+
+[node name="Master" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Join Button" type="Button" parent="CanvasLayer"]
+margin_left = 671.0
+margin_top = 496.0
+margin_right = 808.0
+margin_bottom = 539.0
+text = "Join"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Host Button" type="Button" parent="CanvasLayer"]
+margin_left = 398.0
+margin_top = 128.0
+margin_right = 613.0
+margin_bottom = 198.0
+text = "Host"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 305.0
+margin_top = 498.0
+margin_right = 319.0
+margin_bottom = 513.0
+rect_scale = Vector2( 3, 3 )
+text = "IP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IPEntry" type="TextEdit" parent="CanvasLayer"]
+margin_left = 364.0
+margin_top = 496.0
+margin_right = 646.0
+margin_bottom = 541.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera" type="Camera" parent="."]
+
+[node name="WeatherManager" parent="." instance=ExtResource( 2 )]
+
+[connection signal="pressed" from="CanvasLayer/Join Button" to="." method="_on_Join_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Host Button" to="." method="_on_Host_Button_pressed"]
